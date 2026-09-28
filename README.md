@@ -1,142 +1,142 @@
 # Robex — Local website
 
-React + TypeScript + Vite + Tailwind CSS. 로컬 개발용 첫 시안입니다.
+React + TypeScript + Vite + Tailwind CSS. An initial draft for local development.
 
-## 실행
+## Running locally
 
-Node.js 20.19+ 또는 22 LTS 권장. 현재 환경의 Node 20.11에서도 설치와 빌드를 확인했습니다.
+Node.js 20.19+ or 22 LTS is recommended. Installation and builds were also verified with Node 20.11 in the original development environment.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-터미널에 표시된 localhost 주소를 엽니다. 종료하려면 Ctrl+C.
+Open the localhost URL shown in the terminal. Press Ctrl+C to stop the server.
 
 ```sh
 npm run build
 npm run preview
 ```
 
-## 콘텐츠 수정
+## Editing content
 
-디자인은 그대로 두고 아래 파일을 수정하세요. 개발 서버에서는 저장하면 반영되며, 배포본은 다시 빌드해야 합니다.
+Edit the files below to update content while keeping the design intact. The development server reflects saved changes automatically; deployed versions require a rebuild.
 
-| 내용                                  | 파일                            |
-| ------------------------------------- | ------------------------------- |
-| 구성원 이름·역할·이메일·사진·홈페이지 | `src/content/people.json`       |
-| 졸업생                                | `src/content/alumni.json`       |
-| 연구 분야                             | `src/content/research.json`     |
-| 연구실 소개                           | `src/content/about.md`          |
-| 홈 화면 및 News 탭 소식               | `src/content/news.json`         |
-| 논문                                  | `src/content/publications.json` |
-| 사진                                  | `public/people/`                |
-| 레이아웃·페이지 구성                  | `src/main.tsx`                  |
-| 색상·폰트·반응형 스타일               | `src/styles.css`                |
+| Content | File |
+| --- | --- |
+| Member names, roles, emails, photos, and websites | `src/content/people.json` |
+| Alumni | `src/content/alumni.json` |
+| Research areas | `src/content/research.json` |
+| Lab introduction | `src/content/about.md` |
+| News on Home and the News tab | `src/content/news.json` |
+| Publications | `src/content/publications.json` |
+| Photos | `public/people/` |
+| Layout and page structure | `src/main.tsx` |
+| Colors, fonts, and responsive styles | `src/styles.css` |
 
-JSON 항목을 복사하여 추가하고 쉼표/따옴표를 유지하세요. 구성원 `image`는 `people/name.jpg` 형식이며, 사진이 없으면 빈 문자열을 넣습니다. 표시 순서는 데이터 순서입니다.
+Copy existing JSON entries to add new ones, preserving commas and quotation marks. Member `image` paths use the format `people/name.jpg`; use an empty string if no photo is available. Entries appear in data order.
 
-논문 예시(형식 설명이며 실제 논문 아님):
+Example publication (for format reference only, not an actual publication):
 
 ```json
 [
   {
-    "title": "논문 제목",
-    "authors": "저자 목록",
-    "venue": "학회 또는 저널",
+    "title": "Paper title",
+    "authors": "Author list",
+    "venue": "Conference or journal",
     "year": 2026,
     "url": "https://example.com/paper"
   }
 ]
 ```
 
-현재 publications.json은 비어 있으며 Google Scholar의 실제 논문 목록으로 연결됩니다. 홈 Highlights는 확인된 2025년 수상 이력입니다.
+Currently, publications.json is empty, and the site links to the actual publication list on Google Scholar. The Home Highlights section lists verified awards from 2025.
 
-## 구현 및 후속 고려사항
+## Implementation and future considerations
 
-- 여섯 화면: Home, Research, People, Publications, News, Contact.
-- 해시 주소(`#people` 등)를 사용하므로 정적 호스팅에서 새로고침에 별도 라우팅 설정이 필요하지 않습니다.
-- 외부 서버·DB·로그인·추적 도구 없이 실행됩니다.
-- 모바일 메뉴, 키보드 포커스, 본문 건너뛰기, 화면별 제목을 포함합니다.
-- 공개 전 별도 URL과 검색 엔진용 정적 HTML/메타데이터를 구성하는 작업은 남아 있습니다.
-- 파일 기반 편집입니다. 브라우저 관리자 편집 화면은 포함하지 않습니다.
+- Six views: Home, Research, People, Publications, News, and Contact.
+- Hash URLs such as `#people` allow page refreshes on static hosting without additional routing configuration.
+- Runs without a separate backend, database, login, or tracking tools.
+- Includes a mobile menu, keyboard focus styles, a skip-to-content link, and per-view titles.
+- Dedicated page URLs and static HTML/metadata for search engines remain to be implemented before public release.
+- Uses file-based editing; no browser-based admin editor is included.
 
-## 내용·사진 출처
+## Content and photo sources
 
-2026-09-18 확인:
+Verified on 2026-09-18:
 
-- 구성원 12명 및 졸업생 1명: https://robex.engin.umich.edu/team/
-- 팀 사진: 위 Team 페이지의 WordPress 업로드 원본. 로컬 프로토타입용으로 복사.
-- 홈/연구 사진: https://alanpapalia.github.io/assets/img/river_pavilion.jpg
-- 소개·수상 이력: https://name.engin.umich.edu/people/alan-papalia/ 및 https://alanpapalia.github.io/
-- 지원 안내: https://alanpapalia.github.io/join/
-- 논문 링크: https://alanpapalia.github.io/publications/
+- Twelve members and one alumnus: https://robex.engin.umich.edu/team/
+- Team photos: original WordPress uploads from the Team page above, copied for the local prototype.
+- Home/research photo: https://alanpapalia.github.io/assets/img/river_pavilion.jpg
+- Introduction and awards: https://name.engin.umich.edu/people/alan-papalia/ and https://alanpapalia.github.io/
+- Application guidance: https://alanpapalia.github.io/join/
+- Publication links: https://alanpapalia.github.io/publications/
 
-연구 분야 및 소개 문장은 위 공식 정보에 근거한 편집 초안입니다. GitHub Pages 배포 대상은 `KJYoung/RobexTemp`입니다. 사진 사용 권한 및 최종 문구는 실제 공개 전에 연구실에서 확인하세요.
+The research descriptions and introductory text are editorial drafts based on the official sources above. The GitHub Pages deployment target is `KJYoung/RobexTemp`. The lab should verify photo permissions and final wording before public release.
 
-## 로고 및 헤더
+## Logo and header
 
-사용자가 제공한 `public/robex-logo.png` 원본을 사용합니다. 이미지의 바깥 여백은 `.logo-crop` 스타일로 화면에서만 숨기며 원본은 보존합니다. 소속 링크는 푸터에 있습니다. 기존 `#join-us` 링크는 Contact로 연결됩니다.
+The site uses the original user-provided `public/robex-logo.png`. The `.logo-crop` style visually hides the outer whitespace while preserving the original image. Affiliation links are in the footer. Legacy `#join-us` links open Contact.
 
-## 개인 페이지와 Topics 관리
+## Individual profiles and Topics
 
-구성원 사진과 이름은 `#people/alan-papalia` 같은 개인 페이지로 연결됩니다. `id`는 주소로 사용하므로 이름 표시를 수정해도 가급적 유지하세요.
+Member photos and names link to individual profiles such as `#people/alan-papalia`. Since `id` is used in the URL, keep it stable when possible, even if the displayed name changes.
 
-- `src/content/topics.json`: 공통 태그 목록. 항목 형식은 `{ "id": "slam", "label": "SLAM" }`입니다.
-- `people.json` 또는 `alumni.json`의 `topics`: 공통 목록의 ID 배열. 예: `["slam"]`.
-- `fullBio`: Markdown 문자열.
-- `researches`: `{ "title": "...", "description": "Markdown 내용", "url": "https://..." }` 항목 배열. URL은 생략 가능합니다.
-- People 오른쪽 패널에서 태그를 선택하면 해당 태그를 가진 구성원과 졸업생이 표시됩니다. PI는 항상 표시되며 목록과 개인 페이지에서 Topics를 표시하지 않습니다. 개인 페이지를 보고 목록으로 돌아오면 필터가 유지됩니다.
+- `src/content/topics.json`: shared tag list. Entries use the format `{ "id": "slam", "label": "SLAM" }`.
+- `topics` in `people.json` or `alumni.json`: an array of IDs from the shared list, such as `["slam"]`.
+- `fullBio`: a Markdown string.
+- `researches`: an array of entries such as `{ "title": "...", "description": "Markdown content", "url": "https://..." }`. The URL is optional.
+- Selecting a tag in the right-hand panel on People displays members and alumni with that tag. The PI always remains visible, with Topics hidden in both the list and the individual profile. Filters are preserved when returning to the list from a profile.
 
-현재 디자인 확인용으로 Topic 1 / Topic 2를 무작위 배정했고, 개인 소개와 연구 항목에는 임시 예시 문구를 넣었습니다. 실제 연구 분야나 경력이 아닙니다. 공개 전에 실제 내용으로 교체하세요.
+Topic 1 / Topic 2 are currently assigned randomly for design review, and profile bios and research entries contain temporary example text. They do not represent actual research interests or experience. Replace them with real content before public release.
 
-이메일은 데이터 파일에서도 `name (at) umich (dot) edu` 형식으로 관리하며, 화면에는 일반 텍스트로 표시합니다. `mailto:` 링크는 사용하지 않습니다.
+Emails are stored in data files as `name (at) umich (dot) edu` and displayed as plain text. The site does not use `mailto:` links.
 
-## GitHub Pages 배포
+## GitHub Pages deployment
 
-`.github/workflows/deploy.yml`은 `main` 브랜치 push 또는 수동 실행 시 사이트를 빌드하고 배포합니다. Settings → Pages → Source는 GitHub Actions를 사용합니다. 배포 경로는 Pages 설정에서 자동으로 가져옵니다. 로컬에서는 계속 `npm run dev`를 사용합니다.
+`.github/workflows/deploy.yml` builds and deploys the site on pushes to `main` or manual runs. Set Settings → Pages → Source to GitHub Actions. The deployment base path is read automatically from the Pages settings. Continue using `npm run dev` for local development.
 
-예정 주소: https://kjyoung.github.io/RobexTemp/
+Planned URL: https://kjyoung.github.io/RobexTemp/
 
-## Google Sheets → People 실시간 갱신
+## Google Sheets → live People updates
 
-원본: https://docs.google.com/spreadsheets/d/1Ji6d41RBSASJ6CPgB0OV_-XoevKH5qxCY_Xt_5u2tbA/edit
+Source: https://docs.google.com/spreadsheets/d/1Ji6d41RBSASJ6CPgB0OV_-XoevKH5qxCY_Xt_5u2tbA/edit
 
-브라우저에서 `src/hooks/usePeople.ts`가 페이지를 열 때와 30초마다 공개 Sheet를 읽습니다. 탭이 숨겨져 있으면 주기 요청을 쉬고, 탭으로 돌아오거나 네트워크가 복구되면 다시 읽습니다. Google 측 캐시로 추가 지연이 생길 수 있으므로 즉시 push되는 방식은 아닙니다. Sheet 수정에 재배포나 새로고침은 필요하지 않습니다.
+In the browser, `src/hooks/usePeople.ts` reads the public sheet when the page opens and every 30 seconds. Polling pauses while the browser tab is hidden and resumes when the tab becomes visible or the network reconnects. Google's caching may introduce additional delays, so this is not an instant push mechanism. Sheet edits do not require redeployment or a page refresh.
 
-`People` 탭의 첫 행은 필드명, 두 번째 행부터 한 사람씩 입력합니다. `name`으로 매칭하며 앞뒤 공백과 대소문자는 무시합니다. `id`는 이름 매칭 키가 아닌 개인 페이지 주소입니다.
+The first row of the `People` tab contains field names, with one person per row starting in row 2. Entries are matched by `name`, ignoring leading/trailing whitespace and case. The `id` field is the individual profile URL identifier, not the name-matching key.
 
-- 최초 화면은 번들에 포함된 `src/content/people.json`을 사용합니다. Sheet의 값이 있는 셀만 화면 데이터에 덮어씁니다. 빈 셀은 현재 값을 유지합니다. 같은 페이지 세션에서 이전에 읽은 값도 유지되며, 새로 열면 JSON부터 다시 시작합니다.
-- 시트에서 빠진 구성원은 유지합니다. 새 이름은 오타로 잘못 연결하지 않도록 오류로 처리합니다. 새 구성원은 먼저 JSON에 추가하고 배포하세요.
-- `topics`: 쉼표로 구분하거나 JSON 배열을 사용합니다. 새 태그는 화면의 필터와 프로필에 자동으로 나타납니다.
-- `fullBio`: 여러 줄 문장과 Markdown을 지원합니다.
-- `res-1-title`, `res-1-desc`, `res-1-url`: 첫 번째 연구 항목의 제목·설명·링크입니다. 숫자를 늘려 추가할 수 있습니다. 빈 셀은 해당 항목의 기존 필드를 유지합니다.
-- `researches` 전체를 JSON 배열로 입력할 수도 있습니다.
-- 이메일의 @와 .는 표시 시 (at), (dot)으로 변환됩니다. 테스트 숫자도 비어 있지 않으면 반영됩니다.
+- The initial view uses the bundled `src/content/people.json`. Only non-empty sheet cells override the displayed data. Blank cells preserve current values, including values loaded earlier in the same page session. Opening the page again starts from JSON.
+- Members missing from the sheet are retained. Unknown names are treated as errors to avoid accidental matches caused by typos. Add new members to JSON and deploy first.
+- `topics`: use comma-separated values or a JSON array. New tags automatically appear in the filters and profiles.
+- `fullBio`: supports multiline text and Markdown.
+- `res-1-title`, `res-1-desc`, `res-1-url`: the title, description, and link for the first research entry. Increase the number to add more entries. Blank cells preserve the corresponding existing fields.
+- You can also provide the entire `researches` field as a JSON array.
+- Email @ and . characters are converted to (at) and (dot) for display. Non-empty numeric test values are also applied.
 
-Sheet는 방문자의 브라우저에서 로그인 없이 읽을 수 있어야 합니다. 읽기·검증 실패 시 마지막 성공 데이터를 유지하며, 첫 요청이 실패하면 JSON으로 표시합니다. 다음 주기에 다시 시도합니다. 중복 이름 등 잘못된 Sheet는 일부만 적용하지 않고 전체 갱신을 거부합니다.
+The sheet must be readable in visitors' browsers without signing in. If reading or validation fails, the last successfully loaded data is retained; if the first request fails, the site displays JSON data. The next polling cycle retries the request. Invalid sheets, such as those with duplicate names, are rejected as a whole rather than partially applied.
 
-`npm run dev`와 `npm run build`는 Sheet 다운로드 없이 실행됩니다. localhost와 GitHub Pages 모두 브라우저에서 같은 방식으로 갱신됩니다. 브라우저는 저장소의 JSON 파일을 수정하지 않습니다.
+`npm run dev` and `npm run build` run without downloading the sheet. Both localhost and GitHub Pages update through the browser in the same way. The browser does not modify JSON files in the repository.
 
-JSON 자체에 최신 값을 저장하고 싶을 때만 `npm run sync:people`을 실행하세요. 이 명령은 기존처럼 people.json을 덮어쓰고 새 topics를 topics.json에 등록합니다. 변경 파일을 커밋·배포하면 다음 방문의 기본 데이터가 됩니다. 병합 규칙 테스트는 `npm run test:sync`로 실행합니다.
+Run `npm run sync:people` only when you want to save the latest values to JSON itself. This command overwrites people.json and registers new topics in topics.json. Commit and deploy the changed files to make them the default data for future visits. Run the merge-rule tests with `npm run test:sync`.
 
-## Alumni / News 실시간 갱신
+## Live Alumni / News updates
 
-People과 동일하게 Alumni와 News도 브라우저에서 30초마다 독립적으로 갱신됩니다. 한 시트의 실패가 다른 시트의 갱신을 막지 않습니다.
+Like People, Alumni and News refresh independently in the browser every 30 seconds. A failure in one sheet does not block updates from the others.
 
-- Alumni: `name,destination,url,image,note,id,topics`. name으로 매칭하고 빈 셀은 현재 값을 유지합니다. 새 구성원은 고유 id와 name을 입력하면 추가됩니다. fullBio/researches는 alumni.json에서 제거했으며 졸업생 프로필에도 표시하지 않습니다.
-- News: `id,date,type,title,text,url (optional)`. JSON에서는 마지막 필드를 `url`로 저장하며 생략할 수 있습니다. id는 문자열 고유 키이며, 기존 id의 빈 셀은 현재 값을 유지합니다. 제목이 없는 준비용 행은 숨깁니다. 성공적으로 읽으면 시트의 목록을 ID 내림차순으로 정렬하므로 시트에서 제거한 뉴스는 화면에서도 사라집니다. 링크가 없는 항목은 클릭되지 않는 카드로 표시합니다. type은 각 소식 위에 표시합니다.
-- 최초 화면/연결 실패 시에는 로컬 JSON을 기본값으로 사용합니다. 기존 기본값에 url이 있으면 Sheet의 빈 url은 그 링크를 유지합니다.
-- `npm run sync:people` 수동 파일 저장 명령은 People에만 적용됩니다. Alumni/News는 화면에서만 갱신됩니다.
+- Alumni: `name,destination,url,image,note,id,topics`. Entries are matched by name, and blank cells preserve current values. New entries can be added with a unique id and name. fullBio/researches have been removed from alumni.json and are not shown in alumni profiles.
+- News: `id,date,type,title,text,url (optional)`. The last field is stored as `url` in JSON and may be omitted. The id is a unique string key; blank cells for an existing id preserve current values. Draft rows without a title are hidden. After a successful read, the sheet's entries are sorted by descending ID, and news removed from the sheet also disappears from the view. Entries without links appear as non-clickable cards. The type is displayed above each news item.
+- Local JSON provides the initial data and fallback when the connection fails. If an existing default entry has a url, a blank sheet url preserves that link.
+- The manual `npm run sync:people` file-saving command applies only to People. Alumni/News updates affect the displayed data only.
 
-People 링크는 `linkedin`, `homepage`로 관리합니다. 값이 있는 링크만 각각 LinkedIn/지구본 아이콘으로 표시하며 목록과 개인 프로필에 동일하게 적용됩니다. 기존 `url` Sheet 열은 주소에 따라 두 필드 중 하나로 읽되, 명시한 새 열을 우선합니다. Alumni의 url 형식은 유지됩니다. Home의 Latest news는 ID 내림차순의 첫 3개를 날짜와 제목만 표시합니다.
+People links use `linkedin` and `homepage`. Non-empty links are displayed as LinkedIn and globe icons, respectively, in both the list and individual profiles. The legacy `url` sheet column is mapped to one of these fields based on the address, with explicitly provided new columns taking precedence. Alumni retains its url format. Latest news on Home shows the first three entries in descending ID order, displaying their dates and titles only.
 
-News의 date는 날짜 파싱/포맷 변환 없이 CSV 텍스트로 표시합니다 (예: Spring 2026). 정렬은 date와 무관하게 ID 내림차순이며 숫자 ID 10은 9보다 먼저 나옵니다.
+News dates are displayed as CSV text without date parsing or reformatting (for example, Spring 2026). Sorting uses descending IDs regardless of date, with numeric ID 10 appearing before 9.
 
-News는 숫자 연도와 계절 텍스트가 섞여 있어도 값이 누락되지 않도록 gviz 쿼리 대신 CSV export(gid=874971636)를 사용합니다. News 탭을 삭제 후 새로 만들면 useSheet.ts의 gid도 갱신해야 합니다.
+News uses CSV export (gid=874971636) instead of a gviz query to prevent missing values when numeric years and season text are mixed. If the News tab is deleted and recreated, update its gid in useSheet.ts as well.
 
-시트의 표시용 텍스트에 입력한 문자 `\n`은 실제 줄바꿈으로 표시됩니다. 셀 안의 실제 줄바꿈도 유지됩니다. News 본문/제목/날짜, People 소개/연구/직책/비고, Alumni 소속/비고에 적용하며 URL과 ID는 변환하지 않습니다.
+Literal `\n` sequences in sheet display text are rendered as line breaks. Actual line breaks within cells are also preserved. This applies to News bodies/titles/dates, People bios/research/roles/notes, and Alumni destinations/notes. URLs and IDs are not converted.
 
-News의 선택 필드 `tldr`는 Home에서 제목 아래 짧은 설명으로 표시합니다. 비어 있으면 설명을 생략합니다. News 탭에서는 기존 title과 text를 표시합니다. tldr도 문자 `\n` 줄바꿈과 빈 셀의 기존 값 유지 규칙을 지원합니다.
+The optional News field `tldr` appears as a short description below the title on Home. The description is omitted when empty. The News tab continues to display title and text. The tldr field also supports literal `\n` line breaks and preserves existing values when cells are blank.
 
-People/Alumni/News 모두 원본 CSV export를 사용하여 자동 헤더/타입 추정을 피합니다. People에 이름만 있고 나머지가 빈 미등록 행은 무시하며, 미등록 이름에 실제 수정 값이 있으면 오류를 유지합니다. 시트 탭 재생성 시 useSheet.ts의 SHEET_IDS를 갱신하세요.
+People/Alumni/News all use raw CSV export to avoid automatic header and type inference. Unregistered People rows containing only a name and otherwise blank cells are ignored; unknown names with actual update values still produce an error. Update SHEET_IDS in useSheet.ts if a sheet tab is recreated.
