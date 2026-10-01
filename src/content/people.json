@@ -264,5 +264,24 @@
     ],
     "linkedin": "https://www.linkedin.com/in/niksand/",
     "homepage": ""
+  },
+  {
+    "name": "John Huber",
+    "group": "Undergraduates",
+    "role": "Undergraduate Researcher",
+    "email": "jlhuber (at) umich (dot) edu",
+    "image": "people/john-huber.png",
+    "note": "",
+    "id": "john-huber",
+    "topics": ["topic-2"],
+    "fullBio": "Temporary biography for John Huber. This sample text previews the layout; a full biography will be added here.",
+    "researches": [
+      {
+        "title": "Sample research project",
+        "description": "Temporary project summary for the profile preview. Research goals and results will be added here."
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/john-huber-505828388",
+    "homepage": ""
   }
 ]
