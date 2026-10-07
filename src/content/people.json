@@ -254,8 +254,8 @@
     "image": "people/nik-sanderson.png",
     "note": "",
     "id": "nik-sanderson",
-    "topics": ["topic-2"],
-    "fullBio": "Temporary biography for Nik Sanderson. This sample text previews the layout; a full biography will be added here.",
+    "topics": ["Perception"],
+    "fullBio": "My goal is to develop algorithms that enable robotic navigation in challenging environments, such as the ocean, with a particular interest in applying tools from mathematical optimization theory.",
     "researches": [
       {
         "title": "Sample research project",
@@ -263,7 +263,7 @@
       }
     ],
     "linkedin": "https://www.linkedin.com/in/niksand/",
-    "homepage": ""
+    "homepage": "https://pandahood.github.io/nikolassanderson.github.io/"
   },
   {
     "name": "John Huber",
@@ -282,6 +282,25 @@
       }
     ],
     "linkedin": "https://www.linkedin.com/in/john-huber-505828388",
+    "homepage": ""
+  },
+  {
+    "name": "Sanghyun Kim",
+    "group": "Undergraduates",
+    "role": "Undergraduate Researcher",
+    "email": "sebkimmy (at) umich (dot) edu",
+    "image": "people/sanghyun-kim.png",
+    "note": "",
+    "id": "sanghyun-kim",
+    "topics": ["topic-2"],
+    "fullBio": "Temporary biography for Sanghyun Kim. This sample text previews the layout; a full biography will be added here.",
+    "researches": [
+      {
+        "title": "Sample research project",
+        "description": "Temporary project summary for the profile preview. Research goals and results will be added here."
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/sangkima2",
     "homepage": ""
   }
 ]
