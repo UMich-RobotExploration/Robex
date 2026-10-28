@@ -1,10 +1,14 @@
 [
   {
     "id": "topic-1",
-    "label": "Topic 1"
+    "label": "Navigation & Mapping"
   },
   {
     "id": "topic-2",
-    "label": "Topic 2"
+    "label": "Marine & Environmental Robotics"
+  },
+  {
+    "id": "topic-3",
+    "label": "Autonomy in the Wild"
   }
 ]
