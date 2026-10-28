@@ -75,6 +75,25 @@
     "linkedin": "https://www.linkedin.com/in/-rayyoung-/",
     "homepage": ""
   },
+    {
+    "name": "Dan McGann",
+    "group": "Research Scientists & Postdocs",
+    "role": "Postdoc",
+    "email": "dmcgann (at) umich (dot) edu",
+    "image": "people/dan-mcgann.png",
+    "note": "Co-advised with Prof. Maani Ghaffari",
+    "id": "dan-mcgann",
+    "topics": ["topic-1", "topic-3"],
+    "fullBio": "I received my Ph.D. in robotics at Carnegie Mellon University with Professor Michael Kaess and am currently a postdoctoral research fellow at the University of Michigan with Alan Papalia and Maani Ghaffari. The goal of my research is to develop fundamental theory that enables scalable multi-robot teams to operate autonomously in challenging, unstructured, real-world deployments.",
+    "researches": [
+      {
+        "title": "Sample research project",
+        "description": "Temporary project summary for the profile preview. Research goals and results will be added here."
+      }
+    ],
+    "linkedin": "https://www.linkedin.com/in/danielfmcgann/",
+    "homepage": "https://danmcgann.com"
+  },
   {
     "name": "Shayesteh Hafezi",
     "group": "PhD Students",
