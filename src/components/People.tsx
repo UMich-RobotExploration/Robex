@@ -39,49 +39,16 @@ function TopicTags({ ids, topics }: { ids: string[]; topics: Topic[] }) {
   );
 }
 export function PeopleDirectory({
-  selectedTopic,
-  onTopicChange,
   allPeople,
   topics,
 }: {
   allPeople: Person[];
   topics: Topic[];
-  selectedTopic: string;
-  onTopicChange: (id: string) => void;
 }) {
-  const visible = allPeople.filter(
-    (p) =>
-      p.group === "Principal Investigator" ||
-      !selectedTopic ||
-      p.topics.includes(selectedTopic),
-  );
-  const groups = [...new Set(visible.map((p) => p.group))];
+  const groups = [...new Set(allPeople.map((p) => p.group))];
   return (
     <section className="shell people-directory">
       <h1 className="sr-only">People</h1>
-      <aside className="people-toolbar" aria-label="Filter people by topic">
-        <label htmlFor="topic-filter">Topics</label>
-        <select
-          id="topic-filter"
-          value={selectedTopic}
-          onChange={(e) => onTopicChange(e.target.value)}
-        >
-          <option value="">All topics</option>
-          {topics.map((t) => (
-            <option key={t.id} value={t.id}>
-              {t.label}
-            </option>
-          ))}
-        </select>
-        {selectedTopic && (
-          <button className="clear-filter" onClick={() => onTopicChange("")}>
-            Clear filter
-          </button>
-        )}
-        <span className="sr-only" role="status">
-          {visible.length} people shown
-        </span>
-      </aside>
       <div className="people-list">
         {groups.map((group) => (
           <section className="people-group" key={group}>
@@ -93,7 +60,7 @@ export function PeopleDirectory({
                   : "people-card-grid"
               }
             >
-              {visible
+              {allPeople
                 .filter((p) => p.group === group)
                 .map((p) =>
                   group === "Lab Alumni" ? (
@@ -147,13 +114,6 @@ export function PeopleDirectory({
             </div>
           </section>
         ))}
-        {selectedTopic &&
-          !visible.some((p) => p.group !== "Principal Investigator") && (
-            <p className="empty-results">
-              No people have this topic yet.{" "}
-              <button onClick={() => onTopicChange("")}>Show everyone</button>
-            </p>
-          )}
       </div>
     </section>
   );

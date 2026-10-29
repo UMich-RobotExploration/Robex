@@ -935,38 +935,9 @@ footer {
 }
 
 .people-directory {
+  padding-top: 24px;
   padding-bottom: 80px;
   border-top: 1px solid #dce3e8;
-}
-.people-toolbar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  padding-block: 20px;
-}
-.people-toolbar label {
-  font-size: 14px;
-  font-weight: 600;
-}
-.people-toolbar select {
-  font: inherit;
-  font-size: 14px;
-  padding: 10px 36px 10px 13px;
-  border: 1px solid #bdcbd5;
-  background: #fff;
-  border-radius: 3px;
-  max-width: 100%;
-}
-.people-toolbar select:focus-visible {
-  outline: 3px solid #a66f00;
-  outline-offset: 3px;
-}
-.clear-filter,
-.empty-results button {
-  font-size: 14px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 .portrait-link {
   display: block;
@@ -1000,10 +971,6 @@ footer {
   padding: 5px 12px;
   font-size: 13px;
   line-height: 1.5;
-}
-.empty-results {
-  padding-block: 30px;
-  color: #536474;
 }
 .profile-page {
   border-top: 1px solid #dce3e8;
@@ -1077,9 +1044,6 @@ footer {
   .profile-title {
     font-size: 36px;
   }
-  .people-toolbar {
-    gap: 10px;
-  }
   .profile-page {
     padding-top: 20px;
   }
@@ -1141,41 +1105,7 @@ footer {
   }
 }
 
-/* A compact, sticky filter lives beside the directory, not above the PI. */
-.people-directory {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 176px;
-  column-gap: 28px;
-  align-items: start;
-  padding-top: 24px;
-}
-.people-toolbar {
-  grid-column: 2;
-  grid-row: 1;
-  position: sticky;
-  top: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 10px;
-  padding: 16px;
-  background: #fff;
-  border: 1px solid #dce3e8;
-  border-radius: 8px;
-  box-shadow: 0 5px 18px #00274c0a;
-  z-index: 2;
-}
-.people-toolbar select {
-  width: 100%;
-  padding: 8px 25px 8px 10px;
-}
-.people-toolbar .clear-filter {
-  align-self: flex-start;
-  font-size: 13px;
-}
 .people-list {
-  grid-column: 1;
-  grid-row: 1;
   min-width: 0;
 }
 .people-list .people-group:first-child > h2 {
@@ -1205,10 +1135,6 @@ footer {
   overflow-wrap: anywhere;
 }
 @media (max-width: 1000px) and (min-width: 701px) {
-  .people-directory {
-    grid-template-columns: minmax(0, 1fr) 155px;
-    column-gap: 22px;
-  }
   .people-list .people-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1222,33 +1148,10 @@ footer {
 }
 @media (max-width: 700px) {
   .people-directory {
-    display: flex;
-    flex-direction: column;
     padding-top: 16px;
-  }
-  .people-toolbar {
-    align-self: flex-end;
-    position: relative;
-    top: auto;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px 12px;
-    gap: 10px;
-    margin-bottom: 22px;
-    max-width: 100%;
-    flex-wrap: wrap;
-  }
-  .people-toolbar select {
-    width: auto;
-  }
-  .people-list {
-    width: 100%;
   }
   .people-list .pi {
     grid-template-columns: 1fr;
-  }
-  .people-toolbar .clear-filter {
-    align-self: center;
   }
 }
 

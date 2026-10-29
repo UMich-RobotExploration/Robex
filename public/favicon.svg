@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#00274c"/><text x="13" y="47" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#ffcb05">r</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <title>RobEx Lab</title>
+  <rect width="64" height="64" rx="12" fill="#fff"/>
+  <!-- The wave emblem from robex-logo.png, redrawn for small browser tabs. -->
+  <g transform="translate(12 2) scale(.1422)">
+    <path fill="#00274c" d="M0 154V141C0 63 63 0 141 0s141 63 141 141v59c-35 52-86 9-134-23C95 141 49 126 0 154Z"/>
+    <circle cx="152" cy="95" r="23" fill="#fff"/>
+    <path fill="#0c879c" d="M0 196c38-50 88-29 143 9 53 38 91 55 139 32v13c-6 42-36 64-72 64s-64-25-103-44C66 249 29 254 0 287Z"/>
+    <path fill="#0a9fd3" d="M6 320c25-53 69-50 112-24 56 35 106 69 162 4-8 70-66 122-139 122C75 422 21 379 6 320Z"/>
+  </g>
+</svg>

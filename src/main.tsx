@@ -57,7 +57,6 @@ function App() {
   const [profileId, setProfileId] = useState(() =>
     location.hash.startsWith("#people/") ? location.hash.slice(8) : "",
   );
-  const [selectedTopic, setSelectedTopic] = useState("");
   const main = useRef<HTMLElement>(null);
   useEffect(() => {
     const update = () => {
@@ -248,12 +247,7 @@ function App() {
               topics={topics}
             />
           ) : (
-            <PeopleDirectory
-              allPeople={allPeople}
-              topics={topics}
-              selectedTopic={selectedTopic}
-              onTopicChange={setSelectedTopic}
-            />
+            <PeopleDirectory allPeople={allPeople} topics={topics} />
           ))}
         {page === "Publications" && (
           <>

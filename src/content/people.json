@@ -26,7 +26,7 @@
     "image": "people/minghan-zhu.png",
     "note": "",
     "id": "minghan-zhu",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Minghan Zhu. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -45,7 +45,7 @@
     "image": "people/laura-sopegno.png",
     "note": "Co-advised with Prof. Maha Haji",
     "id": "laura-sopegno",
-    "topics": ["topic-1", "topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Laura Sopegno. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -64,7 +64,7 @@
     "image": "people/raymond-young.png",
     "note": "Co-advised with Prof. Brian Arbic",
     "id": "raymond-young",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Raymond Young. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -83,7 +83,7 @@
     "image": "people/dan-mcgann.png",
     "note": "Co-advised with Prof. Maani Ghaffari",
     "id": "dan-mcgann",
-    "topics": ["topic-1", "topic-3"],
+    "topics": ["Navigation-and-Mapping", "Autonomy-in-the-Wild"],
     "fullBio": "I received my Ph.D. in robotics at Carnegie Mellon University with Professor Michael Kaess and am currently a postdoctoral research fellow at the University of Michigan with Alan Papalia and Maani Ghaffari. The goal of my research is to develop fundamental theory that enables scalable multi-robot teams to operate autonomously in challenging, unstructured, real-world deployments.",
     "researches": [
       {
@@ -102,7 +102,7 @@
     "image": "people/shayesteh-hafezi.png",
     "note": "",
     "id": "shayesteh-hafezi",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Shayesteh Hafezi. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -121,7 +121,7 @@
     "image": "people/tim-lazouski.png",
     "note": "Co-advised with Prof. Maani Ghaffari",
     "id": "tim-lazouski",
-    "topics": ["topic-1"],
+    "topics": [],
     "fullBio": "Temporary biography for Tim Lazouski. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -140,7 +140,7 @@
     "image": "people/junyoung-kim.png",
     "note": "",
     "id": "junyoung-kim",
-    "topics": ["topic-1"],
+    "topics": ["Semantics", "Perception"],
     "fullBio": "Temporary biography for Junyoung Kim. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -159,7 +159,7 @@
     "image": "people/cole-malinchock.png",
     "note": "",
     "id": "cole-malinchock",
-    "topics": ["topic-1"],
+    "topics": [],
     "fullBio": "Temporary biography for Cole Malinchock. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -178,7 +178,7 @@
     "image": "people/zhiyi-wang.jpg",
     "note": "",
     "id": "zhiyi-wang",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Zhiyi Wang. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -197,7 +197,7 @@
     "image": "people/devin-jones.png",
     "note": "",
     "id": "devin-jones",
-    "topics": ["topic-1", "topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Devin Jones. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -216,7 +216,7 @@
     "image": "people/cody-sheltraw.jpg",
     "note": "",
     "id": "cody-sheltraw",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Cody Sheltraw. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -235,7 +235,7 @@
     "image": "people/nicolas-betancur.jpg",
     "note": "",
     "id": "nicolas-betancur",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Nicolas Betancur. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -254,7 +254,7 @@
     "image": "people/arnav-devalapally.jpeg",
     "note": "",
     "id": "arnav-devalapally",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Arnav Devalapally. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -292,7 +292,7 @@
     "image": "people/john-huber.jpg",
     "note": "",
     "id": "john-huber",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for John Huber. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {
@@ -311,7 +311,7 @@
     "image": "people/sanghyun-kim.png",
     "note": "",
     "id": "sanghyun-kim",
-    "topics": ["topic-2"],
+    "topics": [],
     "fullBio": "Temporary biography for Sanghyun Kim. This sample text previews the layout; a full biography will be added here.",
     "researches": [
       {

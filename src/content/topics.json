@@ -1,14 +1,22 @@
 [
   {
-    "id": "topic-1",
+    "id": "Navigation-and-Mapping",
     "label": "Navigation & Mapping"
   },
   {
-    "id": "topic-2",
+    "id": "Marine-and-Environmental-Robotics",
     "label": "Marine & Environmental Robotics"
   },
   {
-    "id": "topic-3",
+    "id": "Autonomy-in-the-Wild",
     "label": "Autonomy in the Wild"
+  },
+  {
+    "id": "Semantics",
+    "label": "Semantics"
+  },
+  {
+    "id": "Perception",
+    "label": "Perception"
   }
 ]

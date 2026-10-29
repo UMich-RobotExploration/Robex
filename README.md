@@ -78,6 +78,8 @@ The research descriptions and introductory text are editorial drafts based on th
 
 The site uses the original user-provided `public/robex-logo.png`. The `.logo-crop` style visually hides the outer whitespace while preserving the original image. Affiliation links are in the footer. Legacy `#join-us` links open Contact.
 
+`public/favicon.svg` redraws the logo's three-color wave emblem for browser tabs. Its white rounded background keeps the navy mark visible on dark browser themes. The icon URL in `index.html` includes a version query; increment it when changing the icon to refresh cached favicons.
+
 ## Individual profiles and Topics
 
 Member photos and names link to individual profiles such as `#people/alan-papalia`. Since `id` is used in the URL, keep it stable when possible, even if the displayed name changes.
@@ -86,7 +88,7 @@ Member photos and names link to individual profiles such as `#people/alan-papali
 - `topics` in `people.json` or `alumni.json`: an array of IDs from the shared list, such as `["slam"]`.
 - `fullBio`: a Markdown string.
 - `researches`: an array of entries such as `{ "title": "...", "description": "Markdown content", "url": "https://..." }`. The URL is optional.
-- Selecting a tag in the right-hand panel on People displays members and alumni with that tag. The PI always remains visible, with Topics hidden in both the list and the individual profile. Filters are preserved when returning to the list from a profile.
+- People displays all members and alumni by group, without a Topics filter. Topic tags remain visible on member cards and profiles, except for the PI.
 
 Topic 1 / Topic 2 are currently assigned randomly for design review, and profile bios and research entries contain temporary example text. They do not represent actual research interests or experience. Replace them with real content before public release.
 
@@ -108,7 +110,7 @@ The first row of the `People` tab contains field names, with one person per row 
 
 - The initial view uses the bundled `src/content/people.json`. Only non-empty sheet cells override the displayed data. Blank cells preserve current values, including values loaded earlier in the same page session. Opening the page again starts from JSON.
 - Members missing from the sheet are retained. Unknown names are treated as errors to avoid accidental matches caused by typos. Add new members to JSON and deploy first.
-- `topics`: use comma-separated values or a JSON array. New tags automatically appear in the filters and profiles.
+- `topics`: use comma-separated values or a JSON array. New tags automatically appear on member cards and profiles.
 - `fullBio`: supports multiline text and Markdown.
 - `res-1-title`, `res-1-desc`, `res-1-url`: the title, description, and link for the first research entry. Increase the number to add more entries. Blank cells preserve the corresponding existing fields.
 - You can also provide the entire `researches` field as a JSON array.
